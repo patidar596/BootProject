@@ -23,6 +23,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @GetMapping("/webApp")
+    public String getName(){
+        return "MyApp";
+    }
+
     @PostMapping("/register")
     public ResponseEntity createUser(@RequestBody User user)
     {
